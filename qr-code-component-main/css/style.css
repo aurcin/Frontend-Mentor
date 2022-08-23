@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  box-sizing: border-box;
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray: hsl(212, 45%, 89%);
+  --color-grayish_blue: hsl(220, 15%, 55%);
+  --color-drak_blue: hsl(218, 44%, 22%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.card__container {
+  background-color: var(--color-gray);
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 320px;
+  padding: 16px;
+
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+
+  max-width: 1300px;
+  max-height: 720px;
+}
+
+.card__image {
+  border-radius: 12px;
+}
+
+.card__title {
+  margin: 22px 12px 0;
+  font-size: 23px;
+  font-weight: 700;
+
+  text-align: center;
+  color: var(--color-drak_blue);
+}
+
+.card__text {
+  margin: 16px 16px 24px;
+
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: var(--color-grayish_blue);
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+  }
+
+  .card__container {
+    max-width: 1300px;
+    max-height: 720px;
+    box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.1);
+  }
+}
